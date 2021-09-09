@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MorroccoHolicTravel</title>
+  <meta name="description" content="Let's travel with MorroccoholicTravel.com!">
+  <meta property="og:title" content="MorroccoholicTravel.com">
+  <meta property="og:type" content="website">
+  <meta property="og: url" content="https://moroccoholictravel.com">
+  <meta property="og: image" content="images/Logo2a.png">
+  <meta property="og:site_name" content="MorroccoholicTravel.com">
+  <meta property="og:description" content="MorroccoholicTravel.com">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="apple-touch-icon" href="images/Logo2a.png">
+  <link rel="shortcut icon" href="images/Logo2a.png">
+
+  <!--<link rel="stylesheet" href="css/style.css"> -->
+  <link rel="stylesheet" type="text/css" href="reset.css">
+  <link rel="stylesheet" href="style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="style2.css" type="text/css" media="all">
+  <link rel="stylesheet" href="contact_form.css" type="text/css" media="all">
+  <link rel="stylesheet" type="text/css" href="css/lightbox.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.7.5/swiper-bundle.min.css">
+  <script type="text/javascript" src="js/lightbox-plus-jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/0da2e085cc.js" crossorigin="anonymous"></script>
+  <script src="js/jquery-3.2.1.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/meanmenu.css" />
+  <script src="js/jquery.meanmenu.min.js"></script>
+  <script type="text/javascript">
+  $(function($){
+      //メニューの表示状態保管用
+      var state = false;
+      //.bodyのスクロール位置
+      var scrollpos = 0;
+      //meanmenuの状態による表示制御
+      function mm_control() {
+          if($('.mean-nav .nav').is(':visible')) {
+              //表示中
+              if(state == false) {
+                  scrollpos = $(window).scrollTop();
+                  $('body').addClass('fixed').css({'top': -scrollpos});
+                  $('.mean-container').addClass('open');
+                  $('.mean-nav .mask').show();
+                  state = true;
+              }
+          } else {
+              //非表示中
+              if(state == true) {
+                  $('body').removeClass('fixed').css({'top': 0});
+                  window.scrollTo( 0 , scrollpos );
+                  $('.mean-container').removeClass('open');
+                  $('.mean-nav .mask').hide();
+                  state = false;
+              }
+          }
+      }
+  
+      $('#gNav').meanmenu({
+          meanMenuContainer: "#header .h_nav", // メニューを表示させる位置
+          meanScreenWidth: "768"
+      });
+      $(document)
+      .on('opend.meanmenu closed.meanmenu', function() {
+          mm_control();
+      })
+      .on('touchend click', '.mean-bar .mask', function(e) {
+          $('.mean-bar .meanmenu-reveal').trigger('click');
+          return false;
+      });
+      //ウィンドウサイズ変更によるメニュー非表示時の制御
+      $(window).on('resize', function() {
+          mm_control();
+      });
+  });
+  </script>
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.js"></script>
+  <script src="script/respond.min.js"></script>
+  <![endif]-->
+  <!--[if lte IE 7]><script src="js/lte-ie7.js"></script><![endif]-->
+  
+</head>
+<header id="header">
+<div class="container">
+  <div id="h_top">
+  <div class="h_logo"><a href="index.html">MoroccoHolicTravel</a>
+    <a href="index.html"><img src="images/Logo2a.png" alt="MoroccoHolicTravel"></a></div>
+    <div class="h_nav">
+      <nav id="gNav">
+        <ul class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="#Tours">Tours<i class="fa fa-angle-down"></i></a>
+            <ul class="sub-menu">
+              <li><a href="#From-Fes">From Fes</a>
+                <ul>
+                  <li><a href="3-days-from-Fes-to-Marrakech.html">3 days from Fes to Marrakech</a></li>
+                  <li><a href="4-days-desert-tour-from-Fes-to-Marrakech.html">4 days desert tour from Fes to Marrakech</a></li>
+                </ul>
+              </li>
+              <li><a href="#From-Marrakech">From Marrakech</a>
+                <ul>
+                  <li><a href="3-days-from-Marrakech-to-Fes.html">3 days from Marrakech to Fes</a></li>
+                  <li><a href="3-days-from-Marrakech-to-Merzouga-desert.html">3 days from Marrakech to Merzouga desert</a></li>
+                </ul>
+              </li>
+              <li><a href="">From Casablanca</a></li>
+              <li><a href="">From Tangier</a></li>
+              <li><a href="">From Ouarzazate</a></li>
+              <li><a href="">From Errachidia</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#Excursions">Excursions<i class="fa fa-angle-down"></i></a>
+            <ul class="sub-menu">
+              <li><a href="1-day-trip-from-Marrakech-to-Essaouira.html">1 day trip from Marrakech to Essaouira</a></li>
+              <li><a href="1-day-trip-from-Marrakech-to-Ourika-Valley.html">1 day trip from Marrakech to Ourika Valley</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#Sahara Desert Activities">Sahara Desert Activities<i class="fa fa-angle-down"></i></a>
+            <ul class="sub-menu">
+              <li><a href="Morocco-Camel-Trekking.html">Camel Trekking</a></li>
+              <li><a href="Trekking-in-Morocco.html">Trekking</a></li>
+              <li><a href="4x4-Sahara-Excursions.html">4X4 Excursions</a></li>
+              <li><a href="Motorcycle-Tours-Sports-Training.html">Motorcycles Tours & Sports Training</a></li>
+              <li><a href="Yoga.html">Yoga</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <div class="mask"></div>
+      </nav>
+    </div>
+  </div>
+</div>
+</header>
+
+<body>
+  <!-- この中に記述していく -->
+  <div class="wrapper">
+  <main>
+    <div class="zoom example">
+      <img src="images/IMG_0471.jpg" alt="main visual">
+    </div>
+    <section id="Main_box">
+      <div class="MainBox_item">
+        <div class="MainTitle">
+          <h2 class="text-center">Your Best Morocco Tours Agency</h2>
+        </div>
+          <p>Welcome to <b>MorroccoHolicTravel.com</b>, new and updated travel information and resources website.
+            Whether you are a traveler on an
+            epic journey, a short vacation or dreaming of a life-changing adventure, these newly launched travel
+            products are
+            designed to satisfy your unique personal travel dreams and make every trip an unforgettable experience.
+            <br><br>
+            <b>MorroccoHolicTravel.com</b> has a team of qualified and experienced guides and drivers who will ensure
+            your comfort, safety and
+            pleasure when you travel to your chosen destination in Morocco. They are keen to share their culture,
+            heritage and
+            history. To be sure, travelers can understand how Morocco became a legend through visual discovery and
+            narrative education.
+            <br><br>
+            The principle of integrity and service value of the <b>MorroccoHolicTravel.com</b> Company team is based on
+            the travel philosophy of
+            professionalism and is committed to integrating travelers into a unique cultural atmosphere.
+            <b>MorroccoHolicTravel.com</b> is aware of its social responsibility to change the lives of local nomadic
+            families, otherwise their
+            nomadic lifestyle will prevent children from getting valuable education. We are proud of launching a
+            humanitarian
+            program initiative that sets out the basic requirements of the basic human rights of education. After
+            booking, you
+            become an important partner of the program.
+          </p>
+      </div>
+
+        <!-- <div class="MainBox_covid">
+          <p><i class="fas fa-hand-holding-heart"></i> Our activities are carried out in compliance with local health recommendations, in order to <b>take care
+              of the health of our clients</b> and avoid the spread of <b>Covid-19</b>.</p>
+        </div> -->
+    </section>
+
+<section id="Tours">
+      <!-- <div class="MainTitle"> -->
+        <div class="MainTitle">
+        <h2 class="text-center">Tours</h2>
+      </div>
+      <section id="From-Fes">
+        <div class="tour-wrapper">
+            <h3 class="tour__title">From Fes</h3>
+            <ul class="tour__list">
+                <li class="tour__item">
+                  <div class="tour__eyecatch">
+                    <a href="3-days-from-Fes-to-Marrakech.html"><img src="images/RIAD_TAHRA_FES571a.jpg" alt="image of Fes"></a>
+                    </div>
+                    <div class="tour__contents">
+                      <a href="3-days-from-Fes-to-Marrakech.html">3 days from Fes to Marrakech</a>
+                      <p><i class="far fa-clock"></i> 3 days</p>
+                      <!-- <p><i class="fas fa-leaf"></i> from €150</p> -->
+                      <a href="3-days-from-Fes-to-Marrakech.html" target="_blank" class="tour-btn text-center">READ MORE</a>
+                    </div>
+                </li>
+
+              <li class="tour__item">
+                  <div class="tour__eyecatch">
+                    <a href="4-days-desert-tour-from-Fes-to-Marrakech.html"><img src="images/IMG_0618a.jpg" alt="image of Fes"></a>
+                  </div>
+                  <div class="tour__contents">
+                    <a href="4-days-desert-tour-from-Fes-to-Marrakech.html">4 days desert tour from Fes to Marrakech</a>
+                    <p><i class="far fa-clock"></i> 4 days</p>
+                    <a href="4-days-desert-tour-from-Fes-to-Marrakech.html" target="_blank" class="tour-btn text-center">READ MORE</a>
+                  </div>
+              </li>
+          </ul>
+
+          </div>
+</section>
+
+<section id="From-Marrakech">
+            <div class="tour-wrapper">
+                <h3 class="tour__title">From Marrakech</h3>
+                <ul class="tour__list">
+                    <li class="tour__item">
+                        <div class="tour__eyecatch">
+                          <a href="3-days-from-Marrakech-to-Fes.html"><img src="images/RIAD_TAHRA_FES464a.jpg" alt="image of Marrakech"></a>
+                        </div>
+                        <div class="tour__contents">
+                          <a href="3-days-from-Marrakech-to-Fes.html">3 days from Marrakech to Fes</a>
+                          <p><i class="far fa-clock"></i> 3 days</p>
+                          <a href="3-days-from-Marrakech-to-Fes.html" target="_blank" class="tour-btn text-center">READ MORE</a>
+                        </div>
+                    </li>
+
+                    <li class="tour__item">
+                      <div class="tour__eyecatch">
+                        <a href="3-days-from-Marrakech-to-Merzouga-desert.html"><img src="images/RIAD_TAHRA_FES319a.jpg" alt="image of Marrakech"></a>
+                        </div>
+                        <div class="tour__contents">
+                        <a href="3-days-from-Marrakech-to-Merzouga-desert.html">3 days from Marrakech to Merzouga desert</a>
+                        <p><i class="far fa-clock"></i> 3 days</p>
+                        <a href="3-days-from-Marrakech-to-Merzouga-desert.html" target="_blank" class="tour-btn text-center">READ MORE</a>
+                        </div>
+                    </li>
+                  </ul>
+              </div>
+  </section>
+</section>
+
+<section id="Excursions">
+  <div class="MainTitle">
+    <h2 class="text-center">Excursions</h2>
+  </div>
+  <div class="tour-wrapper">
+    <ul class="tour__list">
+      <li class="tour__item">
+        <div class="tour__eyecatch">
+          <a href="1-day-trip-from-Marrakech-to-Essaouira.html"><img src="images/IMG_0461.jpg" alt="image of Marrakech"></a>
+          </div>
+          <div class="tour__contents">
+          <a href="1-day-trip-from-Marrakech-to-Essaouira.html">1 day trip from Marrakech to Essaouira</a>
+          <p><i class="far fa-clock"></i> A day</p>
+          <a href="1-day-trip-from-Marrakech-to-Essaouira.html" target="_blank" class="tour-btn text-center">READ MORE</a>
+          </div>
+      </li>
+
+      <li class="tour__item">
+        <div class="tour__eyecatch">
+          <a href="1-day-trip-from-Marrakech-to-Essaouira.html"><img src="images/IMG_0331.jpg" alt="image of Marrakech"></a>
+          </div>
+          <div class="tour__contents">
+          <a href="1-day-trip-from-Marrakech-to-Essaouira.html">1 day trip from Marrakech to Essaouira</a>
+          <p><i class="far fa-clock"></i> A day</p>
+          <a href="1-day-trip-from-Marrakech-to-Essaouira.html" target="_blank" class="tour-btn text-center">READ MORE</a>
+          </div>
+      </li>
+</ul>
+  </div>
+</section>
+
+<section id="Sahara Desert Activities">
+  <div class="MainTitle">
+    <h2 class="text-center">Sahara Desert Activities</h2>
+  </div>
+  <div class="tour-wrapper">
+    <ul class="tour__list">
+      <li class="tour__item">
+        <div class="tour__eyecatch">
+          <a href="Morocco-Camel-Trekking.html"><img src="images/IMG_0316.jpg" alt="image of Camel Trekking"></a>
+          </div>
+          <div class="tour__contents">
+          <a href="Morocco-Camel-Trekking.html">Camel Trekking</a>
+          <!-- <p><i class="far fa-clock"></i> A day</p> -->
+          <a href="Morocco-Camel-Trekking.html" target="_blank" class="tour-btn text-center">READ MORE</a>
+          </div>
+      </li>
+
+      <li class="tour__item">
+        <div class="tour__eyecatch">
+          <a href="Trekking-in-Morocco.html"><img src="images/IMG_0331.jpg" alt="image of Trekking"></a>
+          </div>
+          <div class="tour__contents">
+          <a href="Trekking-in-Morocco.html">Trekking</a>
+          <!-- <p><i class="far fa-clock"></i> A day</p> -->
+          <a href="Trekking-in-Morocco.html" target="_blank" class="tour-btn text-center">READ MORE</a>
+          </div>
+      </li>
+
+      <li class="tour__item">
+        <div class="tour__eyecatch">
+          <a href="4x4-Sahara-Excursions.html"><img src="images/IMG_0331.jpg" alt="image of 4X4 Excursions"></a>
+          </div>
+          <div class="tour__contents">
+          <a href="4x4-Sahara-Excursions.html">4X4 Excursions</a>
+          <!-- <p><i class="far fa-clock"></i> A day</p> -->
+          <a href="4x4-Sahara-Excursions.html" target="_blank" class="tour-btn text-center">READ MORE</a>
+          </div>
+      </li>
+
+      <li class="tour__item">
+        <div class="tour__eyecatch">
+          <a href="Motorcycle-Tours-Sports-Training.html"><img src="images/IMG_4931a.jpg" alt="image of Motorcycles Tours & Sports Training"></a>
+          </div>
+          <div class="tour__contents">
+          <a href="Motorcycle-Tours-Sports-Training.html">Motorcycles Tours & Sports Training</a>
+          <!-- <p><i class="far fa-clock"></i> A day</p> -->
+          <a href="Motorcycle-Tours-Sports-Training.html" target="_blank" class="tour-btn text-center">READ MORE</a>
+          </div>
+      </li>
+      
+      <li class="tour__item">
+        <div class="tour__eyecatch">
+          <a href="Yoga.html"><img src="images/IMG_0331.jpg" alt="image of yoga"></a>
+          </div>
+          <div class="tour__contents">
+          <a href="Yoga.html">Yoga</a>
+          <!-- <p><i class="far fa-clock"></i> A day</p> -->
+          <a href="Yoga.html" target="_blank" class="tour-btn text-center">READ MORE</a>
+          </div>
+      </li>
+
+</ul>
+  </div>
+</section>
+
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <!-- <div class="row">
+            <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">about us</a></li>
+                <li><a href="#">about us</a></li>
+                <li><a href="#">about us</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">about us</a></li>
+                <li><a href="#">about us</a></li>
+                <li><a href="#">about us</a></li>
+            </ul>
+        </div>
+        <div class="footer-col"> 
+            <h4>Our Contacts</h4>
+            <ul>
+                <li><a href="#">about us</a></li>
+                <li><a href="#">about us</a></li>
+                <li><a href="#">about us</a></li>
+            </ul>
+        </div>  -->
+        <div class="footer-col">
+            <h4>Follow Us</h4>
+            <ul class="social-links">
+                <li class="facebook"><a href="https://www.facebook.com/Morocco-Holic-Travel-188292169943151/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                <!-- <li><a href="#"><i class="fab fa-twitter"></i></a></li> -->
+                <li class="instagram"><a href="https://www.instagram.com/moroccoholictravel/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <small class="text-center">©️ 2021 MorroccoHolicTravel All rights reserved.</small>
+</footer>
+  </div>
+</body>
+
+</html>
